@@ -16,7 +16,20 @@
         <main></main>
         <footer>
             <article class="reseaux"></article>
-            <article class="mail"></article>
+            <article class="mail">
+                <form action="php/envoyerMail.php" method="POST">
+                    <h4>Votre nom</h4>
+                    <input type="text" name="nom"><br>
+                    <h4>Votre mail</h4>
+                    <input type="text" name="addrMail"><br>
+                    <h4>Objet du mail</h4>
+                    <input type="text" name="objet"><br>
+                    <h4>Mail (200 caractères maximum)</h4>
+                    <textarea maxlength="200" name="mail"></textarea><br>
+                    <button type="submit">Envoyer</button>
+                    
+                </form>
+            </article>
             <article class="footer"></article>
         </footer>
     </body>
