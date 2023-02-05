@@ -20,7 +20,7 @@
             $comp3 = $_POST['comp3'];
             array_push($competences, [$comp3]);
         }
-        echo $competences;
+        echo "$comp1, $comp2, $comp3";
 
         $laDate = date("Y-m-d H:i:s");
 
