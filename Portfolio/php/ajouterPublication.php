@@ -103,7 +103,7 @@
             $identifiant = $row["nbId"];
 
             // On créé et on exécute la commande
-            $query = "INSERT INTO $nomtable VALUES ($identifiant, '$fichierCible', '$titre', '$texte', $compJSON, $laDate";
+            $query = "INSERT INTO $nomtable VALUES ($identifiant, '$fichierCible', '$titre', '$texte', $compJSON, '$laDate')";
             $result= mysqli_query($link, $query);
 
             if (mysqli_connect_errno()){
