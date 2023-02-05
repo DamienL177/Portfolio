@@ -103,7 +103,7 @@
             $identifiant = $row["nbId"];
 
             // On créé et on exécute la commande
-            $query = "INSERT INTO $nomtable VALUES ($identifiant, '$fichierCible', '$titre', '$texte', $compJSON, ";
+            $query = "INSERT INTO $nomtable VALUES ($identifiant, '$fichierCible', '$titre', '$texte', $compJSON, $laDate";
             $result= mysqli_query($link, $query);
 
             if (mysqli_connect_errno()){
@@ -111,7 +111,7 @@
             }
 
             if(!$result){
-                echo "<p>Problème dans l'insertion : </p>";
+                echo "<p>Problème dans l'insertion : ", mysqli_connect_errno(), " </p>";
             }
 
             // On ferme le lien avec la BD
