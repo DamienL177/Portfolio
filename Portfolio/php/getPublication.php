@@ -57,7 +57,7 @@
         echo "</Publication>\n";
     }
 
-    //echo "<nbPages>$nbPages</nbPages>\n";
+    echo "<nbPages>$nbPages</nbPages>\n";
 
     echo "</lesPublis>\n";
 
