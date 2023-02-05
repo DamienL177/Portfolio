@@ -29,7 +29,7 @@
     }
 
     $nbPages = intdiv($row['nb'], 10) + 1;
-    echo $premierePubli;
+    
     // On créé et on exécute la commande
     $query = "SELECT * FROM $nomtable ORDER BY laDate DESC LIMIT $premierePubli, 10";
     $result= mysqli_query($link, $query);
