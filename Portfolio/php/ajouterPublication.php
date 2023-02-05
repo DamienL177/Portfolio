@@ -7,20 +7,20 @@
     if(isset($_POST['titre']) && isset($_POST['texte'])){
         $titre = $_POST['titre'];
         $texte = $_POST['texte'];
-        $competences = "[";
+        $competences = array();
         if(isset($_POST['comp1'])){
             $comp1 = $_POST['comp1'];
-            $competences .= '$comp1';
+            array_push($competences, [$comp1]);
         }
         if(isset($_POST['comp2'])){
             $comp2 = $_POST['comp2'];
-            $competences .= ", '$comp2'";
+            array_push($competences, [$comp2]);
         }
         if(isset($_POST['comp3'])){
             $comp3 = $_POST['comp3'];
-            $competences .= ", '$comp3'";
+            array_push($competences, [$comp3]);
         }
-        $competences .= "]";
+        echo json_encode($competences);
 
         $laDate = date("Y-m-d H:i:s");
 
