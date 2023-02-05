@@ -1,5 +1,5 @@
 <?php
-    header('Location: ../ajouterPublication.html');
+    //header('Location: ../ajouterPublication.html');
 
     error_reporting(E_ALL);
     ini_set("display_errors", 1);
