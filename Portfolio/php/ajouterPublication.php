@@ -20,7 +20,7 @@
             $comp3 = $_POST['comp3'];
             array_push($competences, [$comp3]);
         }
-        echo json_encode($competences);
+        echo $competences;
 
         $laDate = date("Y-m-d H:i:s");
 
