@@ -10,15 +10,15 @@
         $competences = "[";
         if(isset($_POST['comp1'])){
             $comp1 = $_POST['comp1'];
-            $competences .= $comp1;
+            $competences .= "'$comp1'";
         }
         if(isset($_POST['comp2'])){
             $comp2 = $_POST['comp2'];
-            $competences .= ", " . $comp2;
+            $competences .= ", '$comp2'";
         }
         if(isset($_POST['comp3'])){
             $comp3 = $_POST['comp3'];
-            $competences .= ", " .  $comp3;
+            $competences .= ", '$comp3'";
         }
         $competences .= "]";
 
