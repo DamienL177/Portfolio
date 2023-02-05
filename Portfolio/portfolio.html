@@ -38,7 +38,7 @@ function ajax(){
 
         xhr.open("GET", "php/getPublication.php?page="+page, true);
         xhr.send(null);
-        window.alert(5)
+        window.alert(xhr.readyState)
     }
 }
 
