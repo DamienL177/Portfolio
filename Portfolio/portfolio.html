@@ -38,6 +38,8 @@ function ajax(){
 
         let url= "php/getPublication.php?page="+page;
 
+        window.alert(url);
+
         xhr.open("GET", url, true);
         xhr.send(null);
     }
