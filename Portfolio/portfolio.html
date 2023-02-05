@@ -46,7 +46,7 @@ function surRetour(xhr){
         let docXML = xhr.responseXML;
         let publications = docXML.getElementsByTagName("Publication");
         let nbPage = docXML.getElementsByTagName("nbPages");
-        window.alert(nbPage.firstChild);
+        window.alert(publications.firstChild);
         let unePubli;
         let titrePubli;
         let image;
