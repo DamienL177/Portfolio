@@ -1,6 +1,9 @@
 <?php
     header('Location: ../ajouterPublication.html');
 
+    error_reporting(E_ALL);
+    ini_set("display_errors", 1);
+
     if($isset($_POST['titre']) && $isset($_POST['image']) && $isset($_POST['texte'])){
         $titre = $_POST['titre'];
         $texte = $_POST['texte'];
