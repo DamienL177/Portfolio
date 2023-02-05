@@ -44,9 +44,9 @@ function ajax(){
 function surRetour(xhr){
     if(xhr.readyState==4){
         let docXML = xhr.responseXML;
+        window.alert(docXML.length);
         let publications = docXML.getElementsByTagName("Publication");
         let nbPage = docXML.getElementsByTagName("nbPages");
-        window.alert(publications.firstChild);
         let unePubli;
         let titrePubli;
         let image;
