@@ -55,7 +55,7 @@ function surRetour(xhr){
         let inputTitre;
 
         let articleMain = document.getElementById("main");
-        for(i = 0; i < publications.length(); i++){
+        for(i = 0; i < publications.length; i++){
             unePubli = document.createElement("form");
             unePubli.action = "php/afficherPublication.php";
             unePublic.method = "POST";
