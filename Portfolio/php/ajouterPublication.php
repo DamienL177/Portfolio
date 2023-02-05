@@ -40,7 +40,7 @@
             // Check if image file is a actual image or fake image
             $check = getimagesize($_FILES["image"]["tmp_name"]);
             if($check !== false) {
-                echo "File is an image - " . $check["mime"] . ".";
+                //echo "File is an image - " . $check["mime"] . ".";
                 $uploadOk = 1;
             } else {
                 echo "File is not an image.";
@@ -66,7 +66,7 @@
             } 
             else {
                 if (move_uploaded_file($_FILES["image"]["tmp_name"], $fichierCible)) {
-                    echo "The file ". htmlspecialchars( basename( $_FILES["image"]["name"])). " has been uploaded.";
+                    //echo "The file ". htmlspecialchars( basename( $_FILES["image"]["name"])). " has been uploaded.";
                 } 
                 else {
                     echo "Sorry, there was an error uploading your file.";
@@ -103,7 +103,7 @@
             $identifiant = $row["nbId"];
 
             // On créé et on exécute la commande
-            $query = "INSERT INTO $nomtable VALUES ($identifiant, '$fichierCible', '$titre', '$texte', $compJSON, '$laDate')";
+            $query = "INSERT INTO $nomtable VALUES ($identifiant, '$fichierCible', '$titre', '$texte', $compJSON, $laDate)";
             $result= mysqli_query($link, $query);
 
             if (mysqli_connect_errno()){
