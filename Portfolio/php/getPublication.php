@@ -1,4 +1,5 @@
 <?php
+    header('Content-Type: application/x-www-form-urlencoded');
     header('Content-Type: text/xml');
 
     try{
