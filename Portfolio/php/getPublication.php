@@ -48,12 +48,10 @@
         $titre = $row['titre'];
         $lienImage = $row['lienImage'];
         $texte = $row['texte'];
-        $lien = $row['lien'];
         echo "<Publication>\n";
         echo "<titre>$titre</titre>\n";
         echo "<lienImage>$lienImage</lienImage>\n";
         echo "<texte>$texte</texte>\n";
-        echo "<lien>$lien</lien>\n";
         echo "</Publication>\n";
     }
 
