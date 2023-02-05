@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter une publication</title>
+</head>
+<body>
+    <form action="php/ajouterPublication.php" method="POST">
+        <h3>Titre : </h3>
+        <input type="text" maxlength="25" name="titre"><br>
+        <h3>Image : </h3>
+        <input type="file" name="image" id="image">
+        <h3>Texte : </h3>
+        <input type="text" maxlength="250" name="texte"><br>
+        <h3>Compétence 1 : </h3>
+        <input type="text" name="comp1"><br>
+        <h3>Compétence 2 : </h3>
+        <input type="text" name="comp2"><br>
+        <h3>Compétence 3 : </h3>
+        <input type="text" name="comp3"><br>
+        <input type="submit" value="Inserer">
+    </form>
+</body>
+</html>
