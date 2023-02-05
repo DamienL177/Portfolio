@@ -1,6 +1,6 @@
 
 <?php
-    header('Content-Type: text/html');
+    header('Content-Type: text/xml');
 
     try{
         // On définit les variables nécessaires au lien avec la BD
