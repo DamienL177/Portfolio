@@ -7,20 +7,20 @@
     if(isset($_POST['titre']) && isset($_POST['texte'])){
         $titre = $_POST['titre'];
         $texte = $_POST['texte'];
-        $competences = array();
+        $competences = "[";
         if(isset($_POST['comp1'])){
             $comp1 = $_POST['comp1'];
-            array_push($competences, $comp1);
+            $competences .= $comp1;
         }
         if(isset($_POST['comp2'])){
             $comp2 = $_POST['comp2'];
-            array_push($competences, $comp2);
+            $competences .= ", " . $comp2;
         }
         if(isset($_POST['comp3'])){
             $comp3 = $_POST['comp3'];
-            array_push($competences, $comp3);
+            $competences .= ", " .  $comp3;
         }
-        $compJSON = json_encode($competences);
+        $competences .= "]";
 
         $laDate = date("Y-m-d H:i:s");
 
@@ -103,7 +103,7 @@
             $identifiant = $row["nbId"];
 
             // On créé et on exécute la commande
-            $query = "INSERT INTO $nomtable VALUES ($identifiant, '$fichierCible', '$titre', '$texte', '$compJSON', $laDate)";
+            $query = "INSERT INTO $nomtable VALUES ($identifiant, '$fichierCible', '$titre', '$texte', '$competences', $laDate)";
             $result= mysqli_query($link, $query);
 
             if (mysqli_connect_errno()){
