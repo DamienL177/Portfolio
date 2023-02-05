@@ -1,7 +1,7 @@
 <?php
     header('Content-Type: text/xml');
     header('Content-Type: application/x-www-form-urlencoded');
-
+    echo "2";
     try{
         // On définit les variables nécessaires au lien avec la BD
         $bdd = "u562708442_dlanusse";
@@ -54,12 +54,12 @@
             $lienImage = $row['lienImage'];
             $texte = $row['texte'];
             $lien = $row['lien'];
-            echo "  <Publication>\n";
-            echo "      <titre>$titre</titre>\n";
-            echo "      <lienImage>$lienImage</lienImage>\n";
-            echo "      <texte>$texte</texte>\n";
-            echo "      <lien>$lien</lien>\n";
-            echo "  </Publication>\n";
+            echo "<Publication>\n";
+            echo "<titre>$titre</titre>\n";
+            echo "<lienImage>$lienImage</lienImage>\n";
+            echo "<texte>$texte</texte>\n";
+            echo "<lien>$lien</lien>\n";
+            echo "</Publication>\n";
         }
 
         echo "<nbPages>$nbPages</nbPages>\n";
