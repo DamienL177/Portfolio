@@ -1,5 +1,5 @@
 <?php
-    header('Content-Type: text/xml');
+    //header('Content-Type: text/xml');
     
 
     // On définit les variables nécessaires au lien avec la BD
@@ -30,7 +30,7 @@
     }
 
     $nbPages = intdiv($row['nb'], 10) + 1;
-    
+
     // On créé et on exécute la commande
     $query = "SELECT * FROM $nomtable ORDER BY laDate DESC LIMIT $premierePubli, 10";
     $result= mysqli_query($link, $query);
@@ -57,7 +57,7 @@
         echo "</Publication>\n";
     }
 
-    echo "<nbPages>$nbPages</nbPages>\n";
+    //echo "<nbPages>$nbPages</nbPages>\n";
 
     echo "</lesPublis>\n";
 
