@@ -23,6 +23,18 @@
         }
 
         // On créé et on exécute la commande
+        $query = "SELECT COUNT(*) as nb FROM $nomtable";
+        $result= mysqli_query($link, $query);
+        $row = mysqli_fetch_array($result);
+
+        if (mysqli_connect_errno()){
+            echo "<p>Problème de query : " , mysqli_connect_error() ,"</p>";
+            throw new Exception();
+        }
+
+        $nbPages = $row['nb'] + 1;
+
+        // On créé et on exécute la commande
         $query = "SELECT * FROM $nomtable ORDER BY date DESC LIMIT $premierePubli, 10";
         $result= mysqli_query($link, $query);
 
@@ -50,32 +62,11 @@
             echo "  </Publication>\n";
         }
 
+        echo "<nbPages>$nbPages</nbPages>\n";
+
         echo "</lesPublis>\n";
         
-
-        // On fait le lien avec la BD
-        $link = mysqli_connect($host,$user,$pass,$bdd);
-
-        if (mysqli_connect_errno()){
-            echo "<p>Problème de connect : " , mysqli_connect_error() ,"</p>";
-            throw new Exception();
-        }
-
-        // On créé et on exécute la commande
-        $query = "SELECT COUNT(*) as nb FROM $nomtable";
-        $result= mysqli_query($link, $query);
-        $row = mysqli_fetch_array($result);
-
-        if (mysqli_connect_errno()){
-            echo "<p>Problème de query : " , mysqli_connect_error() ,"</p>";
-            throw new Exception();
-        }
-
-        // On ferme le lien avec la BD
-        mysqli_close($link);
-
-        $nbPages = $row['nb'] + 1;
-        echo "<nbPages>$nbPages</nbPages>\n";
+        
         
     }
     catch(Exception $e) {

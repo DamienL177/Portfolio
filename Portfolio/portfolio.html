@@ -42,7 +42,6 @@ function ajax(){
 
 function surRetour(xhr){
     if(xhr.readyState==4){
-        window.alert("On est dispo");
         let docXML = xhr.responseXML;
         let publications = docXML.getElementsByTagName("Publication");
         let nbPage = docXML.getElementsByTagName("nbPages");
