@@ -36,11 +36,9 @@ function ajax(){
 
         let page = document.getElementById("page").value;
 
-        window.alert(xhr.readyState)
         xhr.open("GET", "php/getPublication.php?page="+page, true);
-        window.alert(xhr.readyState)
         xhr.send(null);
-        window.alert(xhr.readyState)
+        window.alert(5)
     }
 }
 
