@@ -38,13 +38,11 @@ function ajax(){
 
         xhr.open("GET", "php/getPublication.php?page="+page, true);
         xhr.send(null);
-        window.alert(xhr.readyState)
     }
 }
 
 function surRetour(xhr){
     if(xhr.readyState==4){
-        window.alert(4)
         let docXML = xhr.responseXML;
         let publications = docXML.getElementsByTagName("Publication");
         let nbPage = docXML.getElementsByTagName("nbPages");
