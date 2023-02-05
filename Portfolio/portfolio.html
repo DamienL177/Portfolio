@@ -40,11 +40,11 @@ function ajax(){
         xhr.open("GET", "php/getPublication.php?page="+page, true);
         window.alert(xhr.readyState)
         xhr.send(null);
-        window.alert(xhr.readyState)
     }
 }
 
 function surRetour(xhr){
+    window.alert(xhr.readyState)
     if(xhr.readyState==4){
         let docXML = xhr.responseXML;
         let publications = docXML.getElementsByTagName("Publication");
