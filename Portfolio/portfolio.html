@@ -34,9 +34,10 @@ function ajax(){
     if(xhr != null){
         xhr.onreadystatechange = function () {surRetour(xhr); };
 
-        xhr.open("POST", "php/getPublication.php", true);
-        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        xhr.send("page="+document.getElementById("page").value);
+        let page = document.getElementById("page").value;
+
+        xhr.open("GET", "php/getPublication.php?page="+page, true);
+        xhr.send();
     }
 }
 

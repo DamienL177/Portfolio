@@ -1,7 +1,5 @@
 <?php
-    header('Location: ../../index.html');
     header('Content-Type: text/xml');
-    header('Content-Type: application/x-www-form-urlencoded');
 
     try{
         // On définit les variables nécessaires au lien avec la BD
@@ -12,7 +10,7 @@
 
         // On définit les variables nécessaires à la commande
         $nomtable = "Publication";
-        $page = $_POST['page'];
+        $page = $_GET['page'];
         $premierePubli = ($page * 10) - 1;
 
         // On fait le lien avec la BD
