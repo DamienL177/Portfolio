@@ -65,7 +65,7 @@
             // if everything is ok, try to upload file
             } 
             else {
-                if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
+                if (move_uploaded_file($_FILES["image"]["tmp_name"], $fichierCible)) {
                 echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
                 } 
                 else {
