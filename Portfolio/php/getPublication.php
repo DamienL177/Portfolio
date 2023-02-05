@@ -1,6 +1,6 @@
 <?php
-    header('Content-Type: application/x-www-form-urlencoded');
     header('Content-Type: text/xml');
+    header('Content-Type: application/x-www-form-urlencoded');
 
     try{
         // On définit les variables nécessaires au lien avec la BD
