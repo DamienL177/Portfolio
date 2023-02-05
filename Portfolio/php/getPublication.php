@@ -1,6 +1,6 @@
 <?php
-    echo "<?xml version=\"1.0\"?>\n";
     header('Content-Type: text/xml');
+    echo "<?xml version=\"1.0\"?>\n";
 
     // On définit les variables nécessaires au lien avec la BD
     $bdd = "u562708442_dlanusse";
