@@ -10,15 +10,15 @@
         $competences = "[";
         if(isset($_POST['comp1'])){
             $comp1 = $_POST['comp1'];
-            $competences .= "'$comp1'";
+            $competences .= "\"$comp1\"";
         }
         if(isset($_POST['comp2'])){
             $comp2 = $_POST['comp2'];
-            $competences .= ", '$comp2'";
+            $competences .= ", \"$comp2\"";
         }
         if(isset($_POST['comp3'])){
             $comp3 = $_POST['comp3'];
-            $competences .= ", '$comp3'";
+            $competences .= ", \"$comp3\"";
         }
         $competences .= "]";
 
@@ -102,10 +102,8 @@
     
             $identifiant = $row["nbId"];
 
-            echo "$identifiant, '$fichierCible', '$titre', '$texte', $competences, '$laDate'\n";
-
             // On créé et on exécute la commande
-            $query = "INSERT INTO $nomtable VALUES ($identifiant, '$fichierCible', '$titre', '$texte', $competences, '$laDate')";
+            $query = "INSERT INTO $nomtable VALUES ($identifiant, '$fichierCible', '$titre', '$texte', '$competences', '$laDate')";
             $result= mysqli_query($link, $query);
 
             if (mysqli_connect_errno()){
