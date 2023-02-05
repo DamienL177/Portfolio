@@ -1,6 +1,6 @@
 <?php
     header('Content-Type: text/xml');
-
+    echo "<?xml version=\"1.0\"?>\n";
     // On définit les variables nécessaires au lien avec la BD
     $bdd = "u562708442_dlanusse";
     $host = "localhost";
@@ -41,7 +41,7 @@
     // On ferme le lien avec la BD
     mysqli_close($link);
     
-    echo "<?xml version=\"1.0\"?>\n";
+    
     echo "<lesPublis>\n";
 
     while($row = mysqli_fetch_assoc($result)){
