@@ -44,6 +44,7 @@ function ajax(){
 function surRetour(xhr){
     if(xhr.readyState==4){
         let docXML = xhr.responseXML;
+        window.alert(docXML)
         let publications = docXML.getElementsByTagName("Publication");
         let nbPage = docXML.getElementsByTagName("nbPages");
         let unePubli;
@@ -55,7 +56,6 @@ function surRetour(xhr){
         let inputTitre;
 
         let articleMain = document.getElementById("main");
-        window.alert(publications.length)
         for(i = 0; i < publications.length; i++){
             unePubli = document.createElement("form");
             unePubli.action = "php/afficherPublication.php";
