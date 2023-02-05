@@ -4,7 +4,7 @@
     error_reporting(E_ALL);
     ini_set("display_errors", 1);
 
-    if($isset($_POST['titre']) && $isset($_POST['texte'])){
+    if(isset($_POST['titre']) && isset($_POST['texte'])){
         $titre = $_POST['titre'];
         $texte = $_POST['texte'];
         $competences = array();
