@@ -1,4 +1,5 @@
 <?php
+    header('Content-Type: text/xml');
 
     // On définit les variables nécessaires au lien avec la BD
     $bdd = "u562708442_dlanusse";
@@ -28,7 +29,7 @@
     }
 
     $nbPages = intdiv($row['nb'], 10) + 1;
-
+    
     // On créé et on exécute la commande
     $query = "SELECT * FROM $nomtable ORDER BY laDate DESC LIMIT $premierePubli, 10";
     $result= mysqli_query($link, $query);
@@ -39,7 +40,7 @@
 
     // On ferme le lien avec la BD
     mysqli_close($link);
-    header('Content-Type: text/xml');
+    
     echo "<?xml version=\"1.0\"?>\n";
     echo "<lesPublis>\n";
 
