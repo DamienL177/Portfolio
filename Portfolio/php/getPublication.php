@@ -1,5 +1,5 @@
 <?php
-    header('Content-Type: text/xml');
+    //header('Content-Type: text/xml');
 
     // On définit les variables nécessaires au lien avec la BD
     $bdd = "u562708442_dlanusse";
@@ -10,7 +10,7 @@
     // On définit les variables nécessaires à la commande
     $nomtable = "Publication";
     $page = $_GET['page'];
-    $premierePubli = ($page * 10) - 1;
+    $premierePubli = ($page * 10) - 10;
 
     // On fait le lien avec la BD
     $link = mysqli_connect($host,$user,$pass,$bdd);
@@ -28,10 +28,10 @@
         echo "<p>Problème de query : " , mysqli_connect_error() ,"</p>";
     }
 
-    $nbPages = $row['nb'] + 1;
-
+    $nbPages = intdiv($row['nb'], 10) + 1;
+    echo $premierePubli;
     // On créé et on exécute la commande
-    $query = "SELECT * FROM $nomtable ORDER BY date DESC LIMIT $premierePubli, 10";
+    $query = "SELECT * FROM $nomtable ORDER BY laDate DESC LIMIT $premierePubli, 10";
     $result= mysqli_query($link, $query);
 
     if (mysqli_connect_errno()){
@@ -44,7 +44,7 @@
     echo "<?xml version=\"1.0\"?>\n";
     echo "<lesPublis>\n";
 
-    while($row = mysqli_fetch_array($result)){
+    while($row = mysqli_fetch_assoc($result)){
         $titre = $row['titre'];
         $lienImage = $row['lienImage'];
         $texte = $row['texte'];
