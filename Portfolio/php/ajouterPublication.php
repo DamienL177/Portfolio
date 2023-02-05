@@ -33,7 +33,7 @@
             // ON PLACE L'IMAGE DANS SON DOSSIER
             mkdir($chemin, 0755, true);
 
-            $fichierCible = $chemin . basename($_FILES["image"]["name"]);
+            $fichierCible = $chemin . basename($_POST["image"]["name"]);
             $uploadOk = 1;
             $imageFileType = strtolower(pathinfo($fichierCible,PATHINFO_EXTENSION));
 
