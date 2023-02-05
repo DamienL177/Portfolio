@@ -1,4 +1,5 @@
 <?php
+    header('Location: ../../index.html');
     header('Content-Type: text/xml');
     header('Content-Type: application/x-www-form-urlencoded');
 
