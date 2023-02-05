@@ -27,7 +27,7 @@
         $titreBien = str_replace(" ", "_", $titre);
 
         
-        $chemin = "../Publications/" . $titreBien;
+        $chemin = "../Publications/" . $titreBien . "/";
 
         if(!file_exists($chemin)){
             // ON PLACE L'IMAGE DANS SON DOSSIER
