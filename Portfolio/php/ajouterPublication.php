@@ -21,8 +21,10 @@
 
         $laDate = date("Y-m-d H:i:s");
 
+        $titreBien = str_replace(" ", "_", $titre);
+
         
-        $chemin = "../Publications/" . $titre;
+        $chemin = "../Publications/" . $titreBien;
 
         if(!file_exists($chemin)){
             // ON PLACE L'IMAGE DANS SON DOSSIER
