@@ -36,7 +36,9 @@ function ajax(){
 
         let page = document.getElementById("page").value;
 
-        xhr.open("GET", "php/getPublication.php?page="+escape(page), true);
+        let url= "php/getPublication.php?page="+escape(page);
+
+        xhr.open("GET", url, true);
         xhr.send(null);
     }
 }
