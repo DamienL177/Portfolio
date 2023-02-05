@@ -102,7 +102,7 @@
     
             $identifiant = $row["nbId"];
 
-            echo "$identifiant, $fichierCible, $titre, $texte, $competences, $laDate\n";
+            echo "$identifiant, '$fichierCible', '$titre', '$texte', '$competences', '$laDate'\n";
 
             // On créé et on exécute la commande
             $query = "INSERT INTO $nomtable VALUES ($identifiant, $fichierCible, $titre, $texte, $competences, $laDate)";
