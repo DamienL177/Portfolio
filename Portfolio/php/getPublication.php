@@ -24,13 +24,15 @@
     // On créé et on exécute la commande
     $query = "SELECT COUNT(*) as nb FROM $nomtable";
     $result= mysqli_query($link, $query);
-    $row = mysqli_fetch_array($result);
 
     if (mysqli_connect_errno()){
         echo "<p>Problème de query : " , mysqli_connect_error() ,"</p>";
     }
 
-    $nbPages = intdiv($row['nb'], 10) + 1;
+    $row = mysqli_fetch_array($result);
+
+    //$nbPages = intdiv($row['nb'], 10) + 1;
+    $nbPages = 1;
 
     // On créé et on exécute la commande
     $query = "SELECT *, FROM $nomtable ORDER BY laDate DESC LIMIT $premierePubli, 10";
