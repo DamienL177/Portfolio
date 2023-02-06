@@ -67,7 +67,7 @@ function surRetour(xhr){
             lienImage = document.createElement("a");
             lienImage.href= "./php/afficherUnePubli.php?id=" + escape(publications.item(i).childNodes.item(0).firstChild);
             image = document.createElement("img");
-            image.src = publications[i].childNodes[2];
+            image.src = publications.item(i).childNodes.item(2).firstChild;
             image.alt = "L'image de cette publication";
             texte = document.createElement("p");
             texte.innerText = publications.item(i).childNodes.item(3).firstChild;
