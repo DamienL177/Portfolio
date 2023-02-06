@@ -46,7 +46,8 @@
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
     
     echo "<lesPublis>\n";
-    while($row = mysqli_fetch_assoc($result)){
+
+    while($row = mysqli_fetch_row($result)){
         $titre = $row['titre'];
         $lienImage = $row['lienImage'];
         $texte = $row['texte'];
