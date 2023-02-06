@@ -43,7 +43,7 @@
     // On ferme le lien avec la BD
     mysqli_close($link);
     
-    echo "<?xml version=\"1.0\"?>\n";
+    echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
     
     echo "<lesPublis>\n";
     while($row = mysqli_fetch_assoc($result)){
