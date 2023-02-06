@@ -29,7 +29,8 @@
     if (mysqli_connect_errno()){
         echo "<p>Problème de query : " , mysqli_connect_error() ,"</p>";
     }
-
+    $nbPages = $row['nb'];
+    echo "<script type='text/javascript'>window.alert($nbPages)</script>";
     $nbPages = intdiv($row['nb'], 10) + 1;
 
     // On créé et on exécute la commande
