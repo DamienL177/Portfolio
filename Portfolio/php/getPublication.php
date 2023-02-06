@@ -2,7 +2,6 @@
 
     header('Content-Type: text/xml');
     
-
     // On définit les variables nécessaires au lien avec la BD
     $bdd = "u562708442_dlanusse";
     $host = "localhost";
@@ -63,7 +62,6 @@
     echo "<nbPages>$nbPages</nbPages>\n";
 
     echo "</lesPublis>\n";
-
 
 
 
