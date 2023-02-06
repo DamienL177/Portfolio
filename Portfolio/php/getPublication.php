@@ -45,7 +45,6 @@
     echo "<?xml version=\"1.0\"?>\n";
     
     echo "<lesPublis>\n";
-
     while($row = mysqli_fetch_assoc($result)){
         $titre = $row['titre'];
         $lienImage = $row['lienImage'];

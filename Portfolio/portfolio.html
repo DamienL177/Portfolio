@@ -38,7 +38,7 @@ function ajax(){
 
         let url= "php/getPublication.php?page="+page;
 
-        window.alert(url);
+        //window.alert(url);
 
         xhr.open("GET", url, true);
         xhr.send(null);
@@ -62,15 +62,14 @@ function surRetour(xhr){
         for(i = 0; i < publications.length; i++){
             unePubli = document.createElement("form");
             unePubli.action = "php/afficherPublication.php";
-            unePublic.method = "POST";
+            unePubli.method = "POST";
             unePubli.className = "Publication";
             titrePubli = document.createElement("h3")
             titrePubli.innerText = publications.item(i).childNodes.item(0).firstChild;
-            titrePubli.setAttribute(name, 'titre');
             inputImage = document.createElement("input");
             inputImage.type = "hidden"
             inputImage.value = publications.item(i).childNodes.item(0).firstChild;
-            inputImage.setAttribute(name, 'titre');
+            inputImage.setAttribute('name', 'titre');
             image = document.createElement("input");
             image.src = publications.item(i).childNodes.item(1).firstChild;
             image.alt = "L'image de cette publication";
@@ -78,10 +77,10 @@ function surRetour(xhr){
             inputImage = document.createElement("input");
             inputImage.type = "hidden"
             inputImage.value = publications.item(i).childNodes.item(1).firstChild;
-            inputImage.setAttribute(name, 'image');
+            inputImage.setAttribute('name', 'image');
             texte = document.createElement("p");
             texte.innerText = publications.item(i).childNodes.item(2).firstChild;
-            texte.setAttribute(name, 'texte');
+            texte.setAttribute('name', 'texte');
             lien = document.createElement("input");
             lien.type = "submit";
             lien.value = "Voir plus";
