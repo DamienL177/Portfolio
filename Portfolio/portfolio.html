@@ -73,7 +73,7 @@ function surRetour(xhr){
             image = document.createElement("input");
             image.src = publications.item(i).childNodes.item(1).firstChild;
             image.alt = "L'image de cette publication";
-            image.type = "image"
+            image.setAttribute('type', 'image');
             inputImage = document.createElement("input");
             inputImage.type = "hidden"
             inputImage.value = publications.item(i).childNodes.item(1).firstChild;
