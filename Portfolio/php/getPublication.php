@@ -49,10 +49,12 @@
 
     while($row = mysqli_fetch_assoc($result)){
         //echo "<test>1</test>\n";
+        $identifiant = $row['identifiant'];
         $titre = $row['titre'];
         $lienImage = $row['lienImage'];
         $texte = $row['texte'];
         echo "<Publication>\n";
+        echo "<identifiant>$identifiant</identifiant>\n";
         echo "<titre>$titre</titre>\n";
         echo "<lienImage>$lienImage</lienImage>\n";
         echo "<texte>$texte</texte>\n";

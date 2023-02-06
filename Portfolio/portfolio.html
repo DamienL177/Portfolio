@@ -60,33 +60,25 @@ function surRetour(xhr){
 
         let articleMain = document.getElementById("main");
         for(i = 0; i < publications.length; i++){
-            unePubli = document.createElement("form");
-            unePubli.action = "php/afficherPublication.php";
-            unePubli.method = "POST";
+            unePubli = document.createElement("article");
             unePubli.className = "Publication";
             titrePubli = document.createElement("h3")
-            titrePubli.innerText = publications.item(i).childNodes.item(0).firstChild;
-            inputImage = document.createElement("input");
-            inputImage.type = "hidden"
-            inputImage.value = publications.item(i).childNodes.item(0).firstChild;
-            inputImage.setAttribute('name', 'titre');
-            image = document.createElement("input");
-            image.src = publications.item(i).childNodes.item(1).firstChild;
+            titrePubli.innerText = publications.item(i).childNodes.item(1).firstChild;
+            lienImage = document.createElement("a");
+            lienImage.href= "./php/afficherUnePubli.php?id=" + escape(publications.item(i).childNodes.item(0).firstChild);
+            image = document.createElement("img");
+            image.src = publications.item(i).childNodes.item(2).firstChild;
             image.alt = "L'image de cette publication";
-            image.setAttribute('type', 'image');
-            inputImage = document.createElement("input");
-            inputImage.type = "hidden"
-            inputImage.value = publications.item(i).childNodes.item(1).firstChild;
-            inputImage.setAttribute('name', 'image');
             texte = document.createElement("p");
-            texte.innerText = publications.item(i).childNodes.item(2).firstChild;
+            texte.innerText = publications.item(i).childNodes.item(3).firstChild;
             texte.setAttribute('name', 'texte');
-            lien = document.createElement("input");
+            lien = document.createElement("a");
             lien.type = "submit";
-            lien.value = "Voir plus";
+            lien.href = "./php/afficherUnePubli.php?id=" + escape(publications.item(i).childNodes.item(0).firstChild);
+            lien.innerText = "Voir plus";
+            lienImage.appendChild(image);
             unePubli.appendChild(titrePubli);
-            unePubli.appendChild(image);
-            unePubli.appendChild(inputImage);
+            unePubli.appendChild(lienImage);
             unePubli.appendChild(texte);
             unePubli.appendChild(lien);
             articleMain.appendChild(unePubli);
