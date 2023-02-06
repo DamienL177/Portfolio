@@ -47,7 +47,7 @@
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
     
     echo "<lesPublis>\n";
-
+    echo "<test>2</test>\n";
     while($row = mysqli_fetch_assoc($result)){
         echo "<test>1</test>\n";
         $titre = $row['titre'];
