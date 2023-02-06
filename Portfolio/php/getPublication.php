@@ -31,8 +31,7 @@
 
     $row = mysqli_fetch_array($result);
 
-    //$nbPages = intdiv($row['nb'], 10) + 1;
-    $nbPages = 1;
+    $nbPages = intdiv($row['nb'], 10) + 1;
 
     // On créé et on exécute la commande
     $query = "SELECT *, FROM $nomtable ORDER BY laDate DESC LIMIT $premierePubli, 10";
@@ -49,7 +48,8 @@
     
     echo "<lesPublis>\n";
 
-    while($row = mysqli_fetch_row($result)){
+    while($row = mysqli_fetch_assoc($result)){
+        echo "<test>1</test>\n";
         $titre = $row['titre'];
         $lienImage = $row['lienImage'];
         $texte = $row['texte'];
