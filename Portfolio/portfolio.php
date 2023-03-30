@@ -11,6 +11,8 @@
                 <ul>
                     <li><a href="../index.html">Retour à l'index</a></li>
                     <li><a href="../CV/CV.html">Aller vers mon CV</a></li>
+                    
+                    <li><a href="./php/getPublication.php?page=1">Test</a></li>
                 </ul>
             </nav>
         </header>
