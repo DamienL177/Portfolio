@@ -25,7 +25,7 @@
             error_reporting(E_ALL);
 
             if(isset($_GET['page'])){
-                $publications = require './php/getPublication.php?page='.strval($_GET['page']);
+                $publications = require 'dlanusse.fr/Portfolio/php/getPublication.php?page='.strval($_GET['page']);
                 for($i = 0; $i < sizeof($publications); $i++){
                     $image = $publications[$i]["lienImage"];
                     $titre = $publications[$i]["titre"];
