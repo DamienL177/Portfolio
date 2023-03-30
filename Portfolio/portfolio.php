@@ -26,7 +26,7 @@
             error_reporting(E_ALL);
             
             if(isset($_GET['page'])){
-                $lien = '/Portfolio/php/getPublication.php?page=' .strval($_GET['page']).'';
+                $lien = 'https://dlanusse.fr/Portfolio/php/getPublication.php?page=' .strval($_GET['page']).'';
                 $publications = require $lien;
                 for($i = 0; $i < sizeof($publications); $i++){
                     $image = $publications[$i]["lienImage"];
