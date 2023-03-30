@@ -19,17 +19,6 @@
         echo "<p>Problème de connect : " , mysqli_connect_error() ,"</p>";
     }
 
-    // On créé et on exécute la commande
-    $query = "SELECT COUNT(*) as nb FROM $nomtable";
-    $result= mysqli_query($link, $query);
-
-    if (mysqli_connect_errno()){
-        echo "<p>Problème de query : " , mysqli_connect_error() ,"</p>";
-    }
-
-    $row = mysqli_fetch_array($result);
-    $nbPages = intdiv($row['nb'], 10) + 1;
-
     //echo "SELECT * FROM $nomtable ORDER BY laDate DESC LIMIT $premierePubli, 10";
 
     // On créé et on exécute la commande

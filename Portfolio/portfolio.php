@@ -11,7 +11,6 @@
                 <ul>
                     <li><a href="../index.html">Retour à l'index</a></li>
                     <li><a href="../CV/CV.html">Aller vers mon CV</a></li>
-                    
                     <li><a href="./php/getPublication.php?page=1">Test</a></li>
                 </ul>
             </nav>
@@ -27,8 +26,9 @@
             error_reporting(E_ALL);
             
             if(isset($_GET['page'])){
-                $lien = "./php/getPublication.php?page=".strval($_GET['page'])."";
-                echo $lien;
+                $lien = '/Portfolio/Portfolio/php/getPublication.php?page=' .strval($_GET['page']).'';
+                header("Location: $lien");
+                /*
                 $publications = require $lien;
                 for($i = 0; $i < sizeof($publications); $i++){
                     $image = $publications[$i]["lienImage"];
@@ -39,7 +39,7 @@
                             <a href='unePublication.php?id=$id'><img src='$image' alt='Une image présentant cet article'></a>
                             <h3>$titre</h3>
                         </div>";
-                }
+                }*/
 
             }
 
