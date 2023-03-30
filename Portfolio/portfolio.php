@@ -23,9 +23,10 @@
             ini_set('display_errors', 1);
             ini_set('display_startup_errors', 1);
             error_reporting(E_ALL);
-
+            
             if(isset($_GET['page'])){
-                $publications = require 'dlanusse.fr/Portfolio/php/getPublication.php'/*?page='.strval($_GET['page'])*/;
+                header('Location: php/getPublication.php');
+                /*$publications = require 'php/getPublication.php?page='.strval($_GET['page']);
                 for($i = 0; $i < sizeof($publications); $i++){
                     $image = $publications[$i]["lienImage"];
                     $titre = $publications[$i]["titre"];
@@ -35,7 +36,7 @@
                             <a href='unePublication.php?id=$id'><img src='$image' alt='Une image présentant cet article'></a>
                             <h3>$titre</h3>
                         </div>";
-                }
+                }*/
 
             }
 
