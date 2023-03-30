@@ -26,7 +26,7 @@
             error_reporting(E_ALL);
             
             if(isset($_GET['page'])){
-                $lien = '/Portfolio/Portfolio/php/getPublication.php?page=' .strval($_GET['page']).'';
+                $lien = '/Portfolio/php/getPublication.php?page=' .strval($_GET['page']).'';
                 header("Location: $lien");
                 /*
                 $publications = require $lien;
