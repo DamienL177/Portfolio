@@ -27,8 +27,6 @@
             
             if(isset($_GET['page'])){
                 $lien = '/Portfolio/php/getPublication.php?page=' .strval($_GET['page']).'';
-                header("Location: $lien");
-                /*
                 $publications = require $lien;
                 for($i = 0; $i < sizeof($publications); $i++){
                     $image = $publications[$i]["lienImage"];
@@ -39,7 +37,7 @@
                             <a href='unePublication.php?id=$id'><img src='$image' alt='Une image présentant cet article'></a>
                             <h3>$titre</h3>
                         </div>";
-                }*/
+                }
 
             }
 
