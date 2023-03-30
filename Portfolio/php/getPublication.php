@@ -44,27 +44,17 @@
     // On ferme le lien avec la BD
     mysqli_close($link);
     
-    echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
-    
-    echo "<lesPublis>\n";
+    $array = [];
 
     while($row = mysqli_fetch_assoc($result)){
         //echo "<test>1</test>\n";
         $identifiant = $row['identifiant'];
         $titre = $row['titre'];
         $lienImage = $row['lienImage'];
-        $texte = $row['texte'];
-        echo "<Publication>\n";
-        echo "<identifiant>$identifiant</identifiant>\n";
-        echo "<titre>$titre</titre>\n";
-        echo "<lienImage>$lienImage</lienImage>\n";
-        echo "<texte>$texte</texte>\n";
-        echo "</Publication>\n";
+        array_push($array, ["identifiant" => $identifiant, "titre"=> $titre, "lienImage" => $lienImage]);
     }
 
-    echo "<nbPages>$nbPages</nbPages>\n";
-
-    echo "</lesPublis>\n";
+    return $array;
 
 
 
