@@ -23,9 +23,9 @@
             ini_set('display_errors', 1);
             ini_set('display_startup_errors', 1);
             error_reporting(E_ALL);
-            
+
             if(isset($_GET['page'])){
-                $publications = require 'php/getPublication.php?page='.strval($_GET['page']);
+                $publications = require './php/getPublication.php?page='.strval($_GET['page']);
                 for($i = 0; $i < sizeof($publications); $i++){
                     $image = $publications[$i]["lienImage"];
                     $titre = $publications[$i]["titre"];
